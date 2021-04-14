@@ -1,4 +1,4 @@
-# node.js line_bot basic 範本記錄
+# node.js line_bot basic Echo Bot 
 
 ### 執行步驟
 1. npm install linebot --save
