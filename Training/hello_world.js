@@ -8,7 +8,19 @@ const server = http.createServer((req, res) => {
   res.statusCode = 200;
   //設定回應為text文件，並回應 Hello World
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+  switch (req.url){
+    case '/':
+        res.end('hello world');
+        break;
+    case '/about':
+        res.end('This is about page');
+        break;
+    case '/home':
+        res.end('Welcome to my homepage');
+        break;
+    default:
+        res.end('No information')
+  }
 });
 
 server.listen(config.port, config.hostname, () => {
