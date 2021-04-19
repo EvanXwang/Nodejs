@@ -1,9 +1,8 @@
 //透過http 模組啟動 web server 服務
 const http = require('http');
 
-//設定服務監聽localhost:3000 (127.0.0.1:3000/
-const hostname = '127.0.0.1';
-const port = 3000;
+//導入config 設定檔
+const config = require('./config').config;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
@@ -12,6 +11,6 @@ const server = http.createServer((req, res) => {
   res.end('Hello World');
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(config.port, config.hostname, () => {
+  console.log(`Server running at http://${config.hostname}:${config.port}/`);
 });
