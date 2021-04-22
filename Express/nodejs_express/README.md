@@ -36,5 +36,37 @@ ps：除錯 若出現Port 3000 is already in use
  - $ kill -9 PID
 
 
+### 文件結構說明
 
+┌── app.js  
+├── bin  
+│   └── www  // 程式進入點  
+├── package-lock.json  
+├── package.json  
+├── public  
+│   ├── images  
+│   ├── javascripts  
+│   └── stylesheets  
+│       └── style.css  
+├── routes  // 路由  
+│   ├── index.js  
+│   └── users.js  
+└── views  
+    ├── error.jade  
+    ├── index.jade  
+    └── layout.jade  
+    
+1. bin/www 是整個程式的進入點，port 預設為3000  
+   代表web server監聽埠號 3000 port
+   
+2. 前端畫面則是public 與 views 這二個資料夾管理  
 
+3. 在routes/index.js 加入 /test 路徑 並傳送文字  
+   router.get代表建立一個路由並使用HTTP request methods中的get形式   
+   router.get中有兩個參數，第一個是子路徑名稱用單引號字串包起來，  
+   第二個是一個方法裡面面有三個參數分別為 req(request)接收資料、res(respond)回傳資料以及next。
+
+4. 修改檔案後，使用node ./bin/www 或 npm start 來啟動專案  
+   後者指令為何可以啟動，可以查看package.json檔案裡的scripts，  
+   有設定好指令相對路徑。
+   所以在package.json中可以依據習慣設定自己的專屬快捷鍵
