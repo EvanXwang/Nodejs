@@ -5,13 +5,16 @@
 1. npm init  
    初始化，會產生 package.json
    
+   npm init -y 
+   初始化指令 (全部載入預設，不用輸入資料)
+   
 2. npm install  
    安裝 package.json 設定的 packages
    
-3. npm install [package]  
-   - 安裝 [package] ； NPM 後面加 --save   
-   - --save-dev  會存入 package.json 裡  
-   - -g 則安裝到全域 
+3. npm install [package] 
+   - --save (可以將套件相關資訊安裝進 package.json 中)
+   - --save-dev (意旨這個套件只會在開發模式下運作，生產環境下並不會有，如果不確定的話建議使用 --save 即可。)
+   - -g 則安裝到全域 (安裝到自己的電腦上，而不是專案資料夾)
     
 4. npm uninstall   
    移除 [package] 
@@ -19,6 +22,17 @@
     
 5. npm update  
    更新 Local 的所有 Packages
+   
+6. npm list   
+    顯示當前專案已經安裝了那些套件
+    
+7. 補充 npm -g 全域安裝檔案的路徑  
+- Window  
+    ※ 通常 AppData 資料夾是預設隱藏的  
+    C:\Users\[使用者名稱]\AppData\Roaming\npm\node_modules  
+
+ - Mac  
+    /usr/local/lib/node_modules  
    
    
    
