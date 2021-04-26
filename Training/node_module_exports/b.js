@@ -1,21 +1,21 @@
-var myName = 'Ray';
+var myName = 'Ray'
 
 //模組化 myName此變數
-module.exports = myName;
+module.exports = myName
 
 
 
 //若有多個變數或函數想傳入可這樣寫：
 
-var myName1 = 'Evan';
-var myName2 = 'Jojo';
+var myName1 = 'Evan'
+var myName2 = 'Jojo'
 
 function sayHi(){
-    return 'Hello'+myName;
+    return 'Hello'+myName
 }
 
 function num(n){
-    return n * 2 ;
+    return n * 2
 }
 
 module.exports = {
@@ -23,4 +23,4 @@ module.exports = {
     myName2,
     sayHi,
     num
-};
+}
