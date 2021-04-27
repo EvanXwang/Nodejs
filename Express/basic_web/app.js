@@ -1,10 +1,26 @@
 const express = require('express')
 const app = express()
 const port = 3000
+app.use(express.static('public'))
 
-app.get('/', function(req, res){
-  res.send('Hello World!');
+app.get('/' ,function(req, res) {
+  //res.send('Hello Admin');
+
+  //載入靜態檔案的路徑
+  res.send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <img src="img/LINE_logo.png" alt="" srcset="">
+</body>
+</html>`);
 })
+
 
 app.get('/admin', function(req, res){
   res.send('Hello Admin');
