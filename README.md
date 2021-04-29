@@ -6,7 +6,7 @@
 在開發環境的時候，每次修改檔案再存檔，再執行的過程較麻煩  
 使用nodemon套件，可以在每次存檔後，會自動部屬自動執行的程式
 ### 1-2 安裝 
-npm install nodemon-g   (全域安裝)
+npm install nodemon --save-dev   (測試開發用)
 ### 1-3 執行
 nodemon [程式]
  
