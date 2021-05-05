@@ -35,7 +35,7 @@ ps：除錯 若出現Port 3000 is already in use
  - $ lsof -i tcp:3000  
  - $ kill -9 PID
 
-
+ 
 ### 文件結構說明
 
 ┌── app.js  
